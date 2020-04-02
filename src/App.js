@@ -13,7 +13,7 @@ class App extends React.Component {
       movies: {
         loading: false,
         error: false,
-        page: 0,
+        page: 1,
         searchValue: "",
         data: []
       },
@@ -43,7 +43,6 @@ class App extends React.Component {
         movies: {
             ...this.state.movies,
             searchValue : str,
-            page: 0,
             data: response.data.Search
           }
         })
@@ -52,6 +51,7 @@ class App extends React.Component {
   }
 
   moreMovies = () => {
+    console.log(this.state.movies.page + 1)
     axios.get(`http://www.omdbapi.com/?apikey=ed80cc66&s=${this.state.movies.searchValue}&page=${this.state.movies.page + 1}`)
     .then(response => {
       this.setState({
