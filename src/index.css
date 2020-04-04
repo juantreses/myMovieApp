@@ -14,5 +14,18 @@ code {
 
 .App {
   width: 500px;
-  margin: 0 auto
+  margin: 0 auto;
+}
+
+#searchBar {
+  width: 10rem;
+  height: 1rem;
+}
+
+#searchButton {
+  width: 5rem;
+  border-radius: 3px;
+  background-color: lightblue;
+  font-weight: bold;
+  font-size: 18px;
 }
